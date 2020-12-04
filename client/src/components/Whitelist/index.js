@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
-import Img from '../../assets/whitelistedOnly.png';
 
-const Whitelist = ({ drizzle, drizzleState }) => {
+
+const Whitelist = ({ drizzle }) => {
 
  
 
@@ -29,7 +29,6 @@ const Whitelist = ({ drizzle, drizzleState }) => {
   return(
     <div>
       <h1>Whitelist</h1>
-      <img className='whitelist' src={Img} />
       <Button
         color='olive'
         animated='vertical'

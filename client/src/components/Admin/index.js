@@ -4,14 +4,10 @@ import { Button, Form } from 'semantic-ui-react';
 
 const Admin = (drizzle) => {
 
-  console.log(drizzle);
-  
   let account = drizzle.account;
   const contract = drizzle.drizzle.contracts.Voting;
   const [address, setAddress] = useState('');
 
-  console.log(contract);
-  
   const addWhitelist = async (address) => {
   // Interaction avec le smart contract pour ajouter un compte
     const addToWhitelist = contract.methods.addVoter(address).send({ from: account });
@@ -29,6 +25,15 @@ const Admin = (drizzle) => {
     await contract.methods.endProposalSession().send({ from: account })
   }
 
+  const startVoting = async () => {
+
+    await contract.methods.startVotingSession().send({ from: account })
+  }
+
+  const stopVoting = async () => {
+
+    await contract.methods.endVotingSession().send({ from: account })
+  }
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -74,6 +79,20 @@ const Admin = (drizzle) => {
           <Button.Content hidden>
             Stop Proposals
           </Button.Content>
+        </Button>
+        <Button
+          color='orange'
+          primary
+          onClick={() => startVoting()}
+        >
+        Start voting session
+        </Button>
+        <Button
+          color='orange'
+          primary
+          onClick={() => stopVoting()}
+        >
+        End voting session
         </Button>
        </div>
        <div>

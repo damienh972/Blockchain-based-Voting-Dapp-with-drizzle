@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.6.11;
-// pragma experimental ABIEncoderV2;
+pragma experimental ABIEncoderV2;
 
 import "@openzeppelin/contracts/access/Ownable.sol";
 
@@ -195,4 +195,7 @@ contract Voting is Ownable {
 	function getProposalById(uint8 id) public view returns (string memory) {
 		return proposals[id].description;
 	}
+	function getProposals() public view returns (Proposal[] memory ) {
+		return proposals;
+    }
 }

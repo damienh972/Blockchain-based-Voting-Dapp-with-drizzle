@@ -650,12 +650,32 @@
         }
       },
       "links": {},
-      "address": "0xaA29Ff849B44E76b406C225c76080Abc643BFB93",
-      "transactionHash": "0x1bd53092491a8c81c4d74045b8528fc2f44ba3145f42f3908b2c8e296c0359dd"
+      "address": "0xab6b3C244321e405dB26b593d8C47E98Bd8914d5",
+      "transactionHash": "0xa90244dcbb26feeb5ca7a003610fea5511b9d09c75b6792eb4518b86176debbc"
+    },
+    "7555": {
+      "events": {
+        "0x60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_message",
+              "type": "string"
+            }
+          ],
+          "name": "StorageSet",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x34FA52D7346B105914E8749C7C7899945Fa09d22",
+      "transactionHash": "0x1297364f264cc2e0e58a988d42ed67b21a1bc37bad77355e5f4bc416fb5d7285"
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-04T00:21:23.650Z",
+  "updatedAt": "2020-12-04T17:13:09.247Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

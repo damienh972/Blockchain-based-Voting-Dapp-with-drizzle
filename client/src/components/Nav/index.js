@@ -8,18 +8,16 @@ import ProposalRegistration from '../ProposalRegistration';
 import Vote from '../Vote';
 import WinningProposal from '../WinningProposal';
 import Whitelist from '../Whitelist';
-// import img from '../../assets/whitelistedOnly.png';
+
 const Nav = ({ drizzle,account }) => {
 
-
-  const [activeItem, setActiveItem] = useState('Home');
+  
+  const [activeItem, setActiveItem] = useState('');
 
   const handleItemClick = (evt, name) => {
-    console.log(name.name);
     setActiveItem(name.name);
   };
-  console.log(account);
- 
+
   return (
     <Router>
       <Segment className="navbar" inverted>
@@ -36,7 +34,6 @@ const Nav = ({ drizzle,account }) => {
                 name="Admin"
                 active={activeItem === 'Admin'}
                 onClick={handleItemClick}
-                href="/admin"
               />
              </Link>
              <Link to="/proposal-registration">
@@ -48,7 +45,7 @@ const Nav = ({ drizzle,account }) => {
             </Link>
             <Link to="/voting">
               <Menu.Item
-                name="Voting "
+                name="Voting"
                 active={activeItem === 'Voting'}
                 onClick={handleItemClick}
               />
@@ -95,7 +92,10 @@ const Nav = ({ drizzle,account }) => {
            />
         </Route>
 				<Route exact path='/winning-proposal'>
-          <WinningProposal/>
+          <WinningProposal
+            account={account}
+            drizzle={drizzle}
+          />
         </Route>
 				<Route exact path='/whitelist'>
           <Whitelist

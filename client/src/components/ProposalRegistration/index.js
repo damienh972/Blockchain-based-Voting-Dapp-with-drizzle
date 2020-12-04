@@ -20,12 +20,16 @@ const ProposalRegistration = ({ drizzle, account }) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(description);
-     
     registerProposal(description);
   };
+
   const handleChange = (evt, value) => {
     setDescription(value.value);
+  };
+
+  const fetchProposals = async () => {
+    const proposals =  await contract.methods.getProposals().call( {from: account });
+    console.log(proposals.map((proposal) => proposal))
   };
 
 
@@ -46,6 +50,13 @@ const ProposalRegistration = ({ drizzle, account }) => {
       </Form.Field>
       <Button type="submit">Submit</Button>
     </Form>
+    <Button
+          color='orange'
+          primary
+          onClick={() => fetchProposals()}
+    >
+    get proposals
+    </Button>
   </div>
 );
   }
