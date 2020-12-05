@@ -6,15 +6,24 @@ import Voting from "./contracts/Voting.json";
 
 const options = {
   web3: {
-    block: true,
+    // block: true,
     customProvider: new Web3("http://localhost:7545"),
     gas: 900000,
   },
   contracts: [SimpleStorage, ComplexStorage, Voting],
   events: {
-    SimpleStorage: ["StorageSet"],
-    Voting: ["ProposalsRegistrationStarted","ProposalsRegistrationEnded","ProposalRegistered"],
+    Voting: [
+      "VoterRegistered",
+      "ProposalsRegistrationStarted",
+      "ProposalRegistered",
+      "ProposalsRegistrationEnded",
+      "VotingSessionStarted",
+      "VotingSessionEnded",
+      "Voted",
+      "VotesTallied",
+      "WorkflowStatusChange"
+    ],
   },
 };
 
-export default options;
+export default options;F
