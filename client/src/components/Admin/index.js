@@ -12,12 +12,12 @@ const Admin = (drizzle) => {
   const addWhitelist = async (voterAddress) => {
   // Interaction avec le smart contract pour ajouter un compte
     const addToWhitelist = contract.methods.addVoter(voterAddress).send({ from: account });
-    console.log(addToWhitelist);
+    // console.log(addToWhitelist);
+    // Todo: fetch events
   };
 
   const startProposal = async () => {
     await contract.methods.startProposalsSession().send({ from: account });
-    console.log(contract.methods.proposalsStart);
   };
 
   const stopProposal = async () => {
@@ -34,7 +34,6 @@ const Admin = (drizzle) => {
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
-    console.log(address);
     addWhitelist(address);
   };
   const handleChange = (evt, value) => {
@@ -43,10 +42,13 @@ const Admin = (drizzle) => {
 
   return (
     <div className="admin">
+      <h1 className="admin_title">Manage your vote session</h1>
       <div className="admin_form">
+        <h2 className="admin_form_title">Step 1: add voters on your whilelist</h2>
+        <p className="admin_form_text">(Register the voters on whitelist voting session)</p>
         <Form onSubmit={handleSubmit}>
           <Form.Field>
-            <label>Voter address</label>
+            <label className="admin_form_label">Voter address</label>
             <Form.Input
               placeholder="Enter address"
               value={address}
@@ -56,43 +58,67 @@ const Admin = (drizzle) => {
           <Button type="submit">Submit</Button>
         </Form>
       </div>
-      <div className="admin_buttons">
-        <Button
-          color="olive"
-          animated="vertical"
-          primary
-          onClick={() => startProposal()}
-        >
-          <Button.Content visible>Owner only</Button.Content>
-          <Button.Content hidden>
-            Start Proposal
-          </Button.Content>
-        </Button>
-        <Button
-          color="yellow"
-          animated="vertical"
-          primary
-          onClick={() => stopProposal()}
-        >
-          <Button.Content visible>Owner only</Button.Content>
-          <Button.Content hidden>
-            Stop Proposals
-          </Button.Content>
-        </Button>
-        <Button
-          color="orange"
-          primary
-          onClick={() => startVoting()}
-        >
-          Start voting session
-        </Button>
-        <Button
-          color="orange"
-          primary
-          onClick={() => stopVoting()}
-        >
-          End voting session
-        </Button>
+      <div className="admin_functions">
+        <div className="admin_functions_container">
+          <h2 className="admin_functions_title">Step 2 : Start proposals time</h2>
+          <p className="admin_functions_text">(Whitelisted people are allowed to register proposals)</p>
+          <Button
+            color="olive"
+            animated="vertical"
+            primary
+            onClick={() => startProposal()}
+          >
+            <Button.Content visible>Owner only</Button.Content>
+            <Button.Content hidden>
+              Start Proposal
+            </Button.Content>
+          </Button>
+        </div>
+        <div className="admin_functions_container">
+          <h2 className="admin_functions_title">Step 3 : End proposals time</h2>
+          <p className="admin_functions_text">(End of proposals registration)</p>
+          <Button
+            color="yellow"
+            animated="vertical"
+            primary
+            onClick={() => stopProposal()}
+          >
+            <Button.Content visible>Owner only</Button.Content>
+            <Button.Content hidden>
+              Stop Proposals
+            </Button.Content>
+          </Button>
+        </div>
+        <div className="admin_functions_container">
+          <h2 className="admin_functions_title">Step 4 : Start voting time</h2>
+          <p className="admin_functions_text">(Whitelisted people are allowed to vote for the best proposals)</p>
+          <Button
+            color="orange"
+            animated="vertical"
+            primary
+            onClick={() => startVoting()}
+          >
+            <Button.Content visible>Owner only</Button.Content>
+            <Button.Content hidden>
+              Start voting
+            </Button.Content>
+          </Button>
+        </div>
+        <div className="admin_functions_container">
+          <h2 className="admin_functions_title">Step 5 : End voting time</h2>
+          <p className="admin_functions_text">(End of votes, go to the "winning proposal" page <a href="/winning-proposal">here</a>)</p>
+          <Button
+            color="orange"
+            animated="vertical"
+            primary
+            onClick={() => stopVoting()}
+          >
+            <Button.Content visible>Owner only</Button.Content>
+            <Button.Content hidden>
+              End voting
+            </Button.Content>
+          </Button>
+        </div>
       </div>
     </div>
   );

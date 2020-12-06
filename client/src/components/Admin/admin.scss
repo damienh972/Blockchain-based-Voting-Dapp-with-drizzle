@@ -1,10 +1,57 @@
 .admin{
   margin-top: 10em;
-
+  padding-left: 2em;
+  text-align: center;
+  .admin_title{
+    padding-bottom: 2em;
+  }
   .admin_form{
-
+    background-color: rgba(69,74,117,0.5);
+    //opacity: 60%;
+    width: 30%;
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    .admin_form_label{
+      font-size: 1.2em !important;
+    }
+    .admin_form_title{
+      color: rgba(0, 0, 0, 1);
+      margin-bottom: 0;
+      font-style: italic;
+    }
+    
     .admin_buttons{
 
+    }
+  }
+}
+.admin_functions{
+  margin-top: 3em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  
+
+  .admin_functions_container{
+    background-color: rgba(69,74,117,0.5);
+    width: 40%;
+    margin: 3em;
+    margin-top: 1em;
+    padding-bottom: 2em;
+    border-radius: 10px;
+    
+    
+    .admin_functions_title{
+      color: rgba(0, 0, 0, 1);
+      margin-bottom: 0;
+      margin-top: 1em;
+      font-style: italic;
+    }
+
+    .admin_functions_text{
+      padding-bottom: 1em;
     }
   }
 }
