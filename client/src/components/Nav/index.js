@@ -26,7 +26,7 @@ const Nav = ({ drizzle, account }) => {
   return (
     <Router>
       <Segment className="navbar" inverted>
-        <Menu className="navbar_container" inverted pointing secondary>  
+        <Menu className="navbar_container" inverted pointing secondary>
           <Link to="/">
             <Menu.Item
               name="Home"
@@ -71,6 +71,12 @@ const Nav = ({ drizzle, account }) => {
           </Link>
         </Menu>
       </Segment>
+      <footer className="footer">
+        <div className="footer_container">
+          <p className="footer_item copyright">Everyone vote - 2020 </p>
+          <a href className="footer_item help">Need help ?</a>
+        </div>
+      </footer>
       <Switch>
         <Route exact path="/">
           <Home />
@@ -79,21 +85,17 @@ const Nav = ({ drizzle, account }) => {
           <Admin
             account={account}
             drizzle={drizzle}
-            // drizzleState={drizzleState}
           />
         </Route>
         <Route exact path="/proposal-registration">
           <ProposalRegistration
             account={account}
             drizzle={drizzle}
-            // drizzleState={drizzleState}
           />
         </Route>
         <Route exact path="/voting">
           <Vote
-            // account={account}
             drizzle={drizzle}
-            // drizzleState={drizzleState}
           />
         </Route>
         <Route exact path="/winning-proposal">
@@ -105,7 +107,6 @@ const Nav = ({ drizzle, account }) => {
         <Route exact path="/whitelist">
           <Whitelist
             drizzle={drizzle}
-            // drizzleState={drizzleState}
           />
         </Route>
       </Switch>

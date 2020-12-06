@@ -1,10 +1,9 @@
 
-.home {
+.home{
 
 
-  .home_firstPart {
+  .home_firstPart{
     background-color: #bebebe;
-    width: 80%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -12,33 +11,89 @@
     justify-content: space-between;
     margin: auto;
     
-    .home_firstPart_title {
+    .home_firstPart_title{
       align-self: center;
-      padding-top: 1.2em;
+      padding-top: 2em;
       padding-bottom: 1.5em;
       font-style: italic;
       font-weight: bold;
       font-size: 4em;
+      color: #454a75;
       
     }
     
-    #home_firsPart_city {
+    #home_firsPart_network{
       width: 50%;
       align-self: center;
       padding-bottom: 2em;
     }
   }
-  .home_secondPart {
+  .home_secondPart{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    align-content: center;
+    align-items: center;
     justify-content: space-between;
 
-    .home_secondPart_text {
-      align-self: center;
+    .home_secondPart_title{
+      background-color: #454a75;
+      color: white ;
+      border-bottom-right-radius: 50px;
+      border-bottom-left-radius: 50px;
       font-size: 2em;
+      padding-top: 1.5em;
+      padding-left: 1em;
+      padding-right: 1em;
+      padding-bottom: 1em;
+      font-weight: bold;
+      
+    }
 
+    .home_secondPart_container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding-bottom: 10em;
+      justify-content: space-between;
+
+      .home_secondPart_text{
+        padding: 0.5em;
+        background-clip: border-box !important;
+        border-radius: 20px;
+        width: max-content;
+        position: relative;
+        font-size: 1.4em;
+        font-style: italic;
+        font-weight: bold;
+      }
+
+      .left_top{
+        top: 8em;
+        background-color: orange;
+      }
+      .right_top{
+        background-color: #a2cc00;
+        right: -40em;
+        top: 10em;
+      }
+
+      #home_secondPart_city{
+        width: 60%;
+        align-self: center;
+        
+      }
+
+      .left_bottom{
+        background-color: #2392c4;
+        left: -4em;
+        bottom: 6em;
+      }
+      .right_bottom{
+        background-color: #465152;
+        color: #dcdcdc;
+        right: -30em;
+        bottom: 4em;
+      }
     }
   }
 }
