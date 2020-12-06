@@ -1,0 +1,45 @@
+
+.home {
+
+
+  .home_firstPart {
+    background-color: #bebebe;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+    margin: auto;
+    
+    .home_firstPart_title {
+      align-self: center;
+      padding-top: 1.2em;
+      padding-bottom: 1.5em;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 4em;
+      
+    }
+    
+    #home_firsPart_city {
+      width: 50%;
+      align-self: center;
+      padding-bottom: 2em;
+    }
+  }
+  .home_secondPart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;
+
+    .home_secondPart_text {
+      align-self: center;
+      font-size: 2em;
+
+    }
+  }
+}
+

@@ -7,7 +7,7 @@ import Voting from "./contracts/Voting.json";
 const options = {
   web3: {
     // block: true,
-    customProvider: new Web3("http://localhost:7545"),
+    customProvider: new Web3("ws://localhost:7545"),
     gas: 900000,
   },
   contracts: [SimpleStorage, ComplexStorage, Voting],
@@ -26,4 +26,4 @@ const options = {
   },
 };
 
-export default options;F
+export default options;

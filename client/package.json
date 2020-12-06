@@ -6,10 +6,15 @@
     "@drizzle/react-components": "^1.5.1",
     "@drizzle/react-plugin": "^1.5.1",
     "@drizzle/store": "^1.5.1",
-    "eslint": "^6.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-config-airbnb": "*",
+    "eslint-import-resolver-alias": "*",
+    "eslint-plugin-import": "*",
+    "eslint-plugin-jsx-a11y": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "lottie-web": "^5.7.4",
+    "node-sass": "^4.0.0",
+    "prop-type": "^0.0.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-dom": "^5.2.0",
@@ -24,7 +29,7 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "airbnb"
   },
   "browserslist": {
     "production": [

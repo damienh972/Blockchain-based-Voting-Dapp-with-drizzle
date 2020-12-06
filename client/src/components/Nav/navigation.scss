@@ -1,0 +1,16 @@
+
+.navbar {
+  
+  margin: 0 !important;
+  border-radius: 0 !important;
+
+  .navbar_container {
+    display: flex;
+    justify-content: space-between;
+
+    .item {
+      font-size: 1.2em;
+    }
+    
+  }
+}
