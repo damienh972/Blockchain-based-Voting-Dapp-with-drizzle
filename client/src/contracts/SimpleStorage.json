@@ -650,8 +650,28 @@
         }
       },
       "links": {},
-      "address": "0xab6b3C244321e405dB26b593d8C47E98Bd8914d5",
-      "transactionHash": "0xa90244dcbb26feeb5ca7a003610fea5511b9d09c75b6792eb4518b86176debbc"
+      "address": "0x08AE8CC6d55e68BdB2C1EE78E0743068D68D4FEd",
+      "transactionHash": "0xee0aeabb8171700e8ae294d1f220b65e34069dd529852f5db8453d9bdd7709b0"
+    },
+    "5777": {
+      "events": {
+        "0x60cdc157ca4737a5d39a0e107532616e7bf6946e615228812c7f9bc9f81797a6": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_message",
+              "type": "string"
+            }
+          ],
+          "name": "StorageSet",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x74A1baD7ea2B5C6Bb94019281d38c67C53cc6962",
+      "transactionHash": "0x63d03ba3de243b393d8a0668e479661b75824af8c2bf03e7ed7bec74444303df"
     },
     "7555": {
       "events": {
@@ -675,7 +695,7 @@
     }
   },
   "schemaVersion": "3.3.2",
-  "updatedAt": "2020-12-04T17:13:09.247Z",
+  "updatedAt": "2020-12-07T12:35:26.849Z",
   "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",

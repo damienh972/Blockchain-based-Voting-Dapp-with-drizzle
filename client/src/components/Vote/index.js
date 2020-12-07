@@ -33,7 +33,7 @@ const Vote = ({ drizzle, account }) => {
   };
   useEffect(() => {
     getProposals();
-	}, []);
+  }, []);
 
   return (
     <div>
