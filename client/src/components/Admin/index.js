@@ -42,7 +42,7 @@ const Admin = (drizzle) => {
 
   return (
     <div className="admin">
-      <h1 className="admin_title">Manage your vote session</h1>
+      <h1 className="page_title">Manage your vote session</h1>
       <div className="admin_form">
         <h2 className="admin_form_title">Step 1: add voters on your whilelist</h2>
         <p className="admin_form_text">(Register the voters on whitelist voting session)</p>

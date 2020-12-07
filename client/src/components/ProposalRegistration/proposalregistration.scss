@@ -1,0 +1,23 @@
+.propregistration{
+  margin-top: 10em;
+
+  .propregistration_form{
+    text-align: center;
+    width: 70%;
+    height: 30vh;
+    padding-left: 2em;
+    background-color: rgba(69,74,117,0.5);
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+
+    .propregistration_form_label{
+      font-size: 1.2em !important;
+    }
+    .propregistration_form_checkbox{
+      padding-top: 2em;
+      text-align: left !important;
+    }
+    
+  }
+}

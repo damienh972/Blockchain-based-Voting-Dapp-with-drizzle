@@ -2,12 +2,9 @@
   margin-top: 10em;
   padding-left: 2em;
   text-align: center;
-  .admin_title{
-    padding-bottom: 2em;
-  }
+  
   .admin_form{
     background-color: rgba(69,74,117,0.5);
-    //opacity: 60%;
     width: 30%;
     margin: auto;
     padding: 10px;
@@ -19,10 +16,6 @@
       color: rgba(0, 0, 0, 1);
       margin-bottom: 0;
       font-style: italic;
-    }
-    
-    .admin_buttons{
-
     }
   }
 }
