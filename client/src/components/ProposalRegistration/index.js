@@ -43,7 +43,7 @@ const ProposalRegistration = ({ drizzle, account }) => {
         <Form.Field className="propregistration_form_checkbox">
           <Checkbox label="Confirm" />
         </Form.Field>
-        <Button type="submit">Submit</Button>
+        <Button color="green" type="submit">Submit</Button>
       </Form>
     </div>
   );

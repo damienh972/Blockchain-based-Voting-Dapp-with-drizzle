@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import {
   Button,
-  Checkbox,
   Form,
   Table,
 } from 'semantic-ui-react';
+
+import './vote.scss';
 
 const Vote = ({ drizzle, account }) => {
   const [listProposals, setListProposals] = useState([]);
@@ -20,25 +21,27 @@ const Vote = ({ drizzle, account }) => {
   const registerVote = async (proposal) => {
     // Interaction avec le smart contract pour ajouter un compte
     let vote = await contract.methods.addVote(proposal).send({ from:account });
-    // console.group(vote);
   };
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
     registerVote(vote);
   };
-  const handleChange = (evt, value) => {
-    console.log(value.value - 1);
-    setVote(value.value);
+  const handleChange = (evt, {value}) => {
+    
+    console.log(value)
+    setVote(value);
   };
+
   useEffect(() => {
     getProposals();
   }, []);
 
   return (
-    <div>
-      <h2>Contact your administrator if you're not in whilelist</h2>
-      <Table celled inverted selectable>
+    <div className="vote">
+      <div id="vote_animation" />
+      <h1 className="page_title">Vote for your prefered proposal</h1>
+      <Table className="vote_table" celled inverted selectable>
         <Table.Header>
           <Table.Row>
             <Table.HeaderCell>Proposal number</Table.HeaderCell>
@@ -55,19 +58,19 @@ const Vote = ({ drizzle, account }) => {
             )))}
         </Table.Body>
       </Table>
-      <Form onSubmit={handleSubmit}>
-        <Form.Field>
-          <label>Vote for your proposal</label>
-          <Form.Input
-            placeholder="Enter proposal number"
-            value={vote}
+      <Form className="vote_form" onSubmit={handleSubmit}>
+      {listProposals.lenght!==0 &&(
+         listProposals.map((proposal, index) => (
+         <Form.Radio
+            className="vote_form_radio"
+            key={index}
+            label={`Proposal ${index+1}`}
+            value={index}
+            checked={vote === index}
             onChange={handleChange}
           />
-        </Form.Field>
-        <Form.Field>
-          <Checkbox label="Confirm" />
-        </Form.Field>
-        <Button type="submit">Submit</Button>
+           )))}
+        <Button color="green" className="vote_form_button" type="submit">Submit</Button>
       </Form>
     </div>
   );

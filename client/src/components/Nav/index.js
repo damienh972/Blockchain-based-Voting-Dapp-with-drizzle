@@ -74,7 +74,7 @@ const Nav = ({ drizzle, account }) => {
       <footer className="footer">
         <div className="footer_container">
           <p className="footer_item copyright">Everyone vote - 2020 </p>
-          <a href className="footer_item help">Need help ?</a>
+          <a className="footer_item help">Need help ?</a>
         </div>
       </footer>
       <Switch>

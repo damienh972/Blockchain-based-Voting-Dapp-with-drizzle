@@ -28,15 +28,17 @@
   
 
   .admin_functions_container{
+    
     background-color: rgba(69,74,117,0.5);
     width: 40%;
-    margin: 3em;
+    margin: 4em;
     margin-top: 1em;
     padding-bottom: 2em;
     border-radius: 10px;
     
     
     .admin_functions_title{
+      word-wrap: break-word;
       color: rgba(0, 0, 0, 1);
       margin-bottom: 0;
       margin-top: 1em;
@@ -44,6 +46,7 @@
     }
 
     .admin_functions_text{
+      word-wrap: break-word;
       padding-bottom: 1em;
     }
   }

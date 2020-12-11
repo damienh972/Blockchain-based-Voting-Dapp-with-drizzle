@@ -55,7 +55,7 @@ const Admin = (drizzle) => {
               onChange={handleChange}
             />
           </Form.Field>
-          <Button type="submit">Submit</Button>
+          <Button  color="green" type="submit">Submit</Button>
         </Form>
       </div>
       <div className="admin_functions">
@@ -63,9 +63,8 @@ const Admin = (drizzle) => {
           <h2 className="admin_functions_title">Step 2 : Start proposals time</h2>
           <p className="admin_functions_text">(Whitelisted people are allowed to register proposals)</p>
           <Button
-            color="olive"
+            color="green"
             animated="vertical"
-            primary
             onClick={() => startProposal()}
           >
             <Button.Content visible>Owner only</Button.Content>
@@ -78,9 +77,8 @@ const Admin = (drizzle) => {
           <h2 className="admin_functions_title">Step 3 : End proposals time</h2>
           <p className="admin_functions_text">(End of proposals registration)</p>
           <Button
-            color="yellow"
+            color="green"
             animated="vertical"
-            primary
             onClick={() => stopProposal()}
           >
             <Button.Content visible>Owner only</Button.Content>
@@ -93,9 +91,8 @@ const Admin = (drizzle) => {
           <h2 className="admin_functions_title">Step 4 : Start voting time</h2>
           <p className="admin_functions_text">(Whitelisted people are allowed to vote for the best proposals)</p>
           <Button
-            color="orange"
+            color="green"
             animated="vertical"
-            primary
             onClick={() => startVoting()}
           >
             <Button.Content visible>Owner only</Button.Content>
@@ -108,9 +105,8 @@ const Admin = (drizzle) => {
           <h2 className="admin_functions_title">Step 5 : End voting time</h2>
           <p className="admin_functions_text">(End of votes, go to the "winning proposal" page <a href="/winning-proposal">here</a>)</p>
           <Button
-            color="orange"
+            color="green"
             animated="vertical"
-            primary
             onClick={() => stopVoting()}
           >
             <Button.Content visible>Owner only</Button.Content>

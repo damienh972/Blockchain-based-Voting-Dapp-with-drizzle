@@ -1,0 +1,26 @@
+.vote{
+    width:80%;
+    padding-top:10em;
+    margin:auto;
+    text-align:center;
+    .vote_form{
+        // width:40%;
+        padding-top:2em;
+        // background-color: rgba(69,74,117,0.5);
+        // border-radius:10px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        text-align: start;
+        font-size: 2em;
+        .radio{
+          font-size: 1em;
+          padding-bottom: 0.5em;
+          
+      }
+      .vote_form_button{
+        align-self: center;
+        width: 10em ;
+      }
+    }
+}
