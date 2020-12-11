@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button } from 'semantic-ui-react';
 import Img from '../../assets/whitelistedOnly.png';
+import './whitelist.scss';
 
 const Whitelist = ({ drizzle }) => {
   const contract = drizzle.contracts.Voting;
@@ -20,12 +21,14 @@ const Whitelist = ({ drizzle }) => {
   };
 
   return (
-    <div>
-      <img className="whitelist" src={Img} alt="security guard" />
+    <div className="whitelist">
+      <div className="whitelist_image">
+        <img src={Img} alt="security guard" />
+      </div>
       <Button
+      className="whitelist_button"
         color="olive"
         animated="vertical"
-        primary
         onClick={() => getWhitelist()}
       >
         <Button.Content visible>Owner only</Button.Content>
@@ -33,11 +36,13 @@ const Whitelist = ({ drizzle }) => {
           Get whitelist
         </Button.Content>
       </Button>
+      <div className="whitelist_addresses">
       {addresses !== null && addresses !== noVoters && (
         addresses.map((address) => <p key={address}>{address}</p>))}
       {addresses === noVoters && (
-      <p>{noVoters}</p>
+      <p >{noVoters}</p>
       )}
+      </div>
     </div>
   );
 };

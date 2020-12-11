@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'semantic-ui-react';
+import './winningproposal.scss'
 
 const WinningProposal = ({drizzle,account}) => {
 
@@ -29,12 +30,12 @@ const WinningProposal = ({drizzle,account}) => {
 	},[]);
 
   return (
-    <div>
-      <h1>And the winner is :</h1>
+    <div className="winningProposal" >
+      <h1 className="page_title" >And the winner is :</h1>
       <Button
+       className="winningProposal_button"
         color='olive'
         animated='vertical'
-        primary
         onClick={() => getWinningProposal()}
       >
         <Button.Content visible>Get winner</Button.Content>
